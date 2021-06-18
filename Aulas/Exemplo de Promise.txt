@@ -1,0 +1,16 @@
+Exemplo de Promise  na mão javascript:
+function obterUsuario() {
+
+    return new Promise(function resolvePromise(resolve, reject) {
+        //quando der algum problema chama -> reject(ERRO)
+        //quando sucess -> RESOLV
+
+        setTimeout(function () {
+            return resolve({
+                id: 1,
+                nome: 'Anderson',
+                dataNascimento: new Date()
+            })
+        }, 1000);//Apos um segundo retonar para ele.
+    })
+}
